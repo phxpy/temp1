@@ -7,11 +7,17 @@
 </head>
 <body>
     <input id="inp" type="text" autofocus inputmode="numeric" />
+    <button id="btn">click</button>
 
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
+        document.querySelector("button").addEventListener("click", () => {
             document.getElementById("inp").focus()
-            document.getElementById("inp").click()
+        })
+        
+        document.addEventListener("DOMContentLoaded", () => {
+            setTimeout(() => {
+                document.querySelector("button").click()
+            }, 500)
         })
     </script>
 </body>
